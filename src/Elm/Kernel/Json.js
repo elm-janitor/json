@@ -330,7 +330,9 @@ function _Json_isArray(value)
 {
 	return Array.isArray(value)
 		|| (typeof FileList !== 'undefined' && value instanceof FileList)
-		|| (typeof TouchList !== 'undefined' && value instanceof TouchList);
+		|| (typeof TouchList !== 'undefined' && value instanceof TouchList)
+		|| (typeof HTMLCollection !== 'undefined' && value instanceof HTMLCollection)
+		|| (typeof NodeList !== 'undefined' && value instanceof NodeList);
 }
 
 function _Json_toElmArray(array)
